@@ -6,7 +6,6 @@ import "./index.css";
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <Homework />
   </React.StrictMode>,
   document.getElementById('root')
 );
