@@ -1,0 +1,134 @@
+ul,h3,p{
+  margin: 0;
+  padding: 0;
+}
+ul li{
+  list-style-type: none;
+  padding:0;
+  margin:0;
+}
+a{
+  text-decoration: none;
+  color: blue;
+}
+
+.wrap{
+  width: 500px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.title{
+  text-align: center;
+}
+.addMessage{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.addMessage input{
+  margin: 0 auto;
+  display: block;
+  height: 40px;
+  width: 300px;
+  font-size: 16px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: #eee;
+  color: #fff;
+}
+.addMessage textarea{
+  margin: 0 auto;
+  display: block;
+  height: 100px;
+  width: 300px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #eee;
+}
+.addMessage button{
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  background-color: #eee;
+}
+.messageList{
+  margin: 10px 20px;
+  text-align: right;
+}
+.messageList li{
+  border:1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.messageList li h3{
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 5px;
+}
+.messageList li input{
+  float: right;
+  height: 15px;
+  width: 15px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 5px;
+}
+.messageList li p{
+  height: 100px;
+  width: calc(100%-16px);
+  display: block;
+  border-top: 1px solid #ccc;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 25px;
+  padding: 8px;
+  text-align: left;
+}
+.messageList li textarea{
+  display: none;
+}
+.messageList li a{
+  position: relative;
+  top:-10px;
+  right: 30px;
+}
+.messageList .editing textarea{
+  display: block;
+  height: 100px;
+  width: 440px;
+  display: block;
+  border: none;
+  border-top: 1px solid #ccc;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 25px;
+  padding: 8px;
+  text-align: left;
+}
+.messageList .editing p{
+  display: none;
+}
+
+.sum{
+  display: flex;
+  margin: 20px;
+}
+.sum label{
+  width: 100px;
+}
+.sum a{
+  text-align: left;
+  width: 175px;
+}
