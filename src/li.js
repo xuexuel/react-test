@@ -6,7 +6,7 @@ function Li(props) {
   let dispatch = useDispatch();
   let [edit, setEdit] = useState(false);
   let editText = useRef();
-  // const [editval,setEdit]
+  const [editval, setEditVal] = useState();
   useEffect(() => {
     if (edit) {
       editText.current.focus();
@@ -31,7 +31,18 @@ function Li(props) {
     <textarea
       ref={editText}
       onBlur={() => {
+        if (editval.trim()) {
+          dispatch({
+            type: "EDIT",
+            id,
+            message:editval
+          })
+        }
         setEdit(false);
+      }}
+      value={editval}
+      onChange={({target})=>{
+        setEditVal(target.value);
       }}
     ></textarea>
     <a href=".">删除</a>

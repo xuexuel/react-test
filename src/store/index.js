@@ -1,4 +1,4 @@
-import {createStore} from 'redux';
+import {combineReducers, createStore} from 'redux';
 
 function reducer(state={
   data: [
@@ -15,33 +15,47 @@ function reducer(state={
     }
   ]
 }, action) {
+  let nowData = [...state.data];
   switch (action.type) {
     case "ADD":
       return {
-        data: [...state.data, {
+        data: [...nowData, {
           id: Date.now(),
           name: action.name,
           message: action.message,
-          selected:false
+          selected: false
         }]
-      }
+      };
     case "SELECTED":
-      let nowData = [...state.data];
       nowData.forEach((item, index) => {
         if (item.id === action.id) {
           nowData[index] = {
             ...item,
-            selected:action.selected
+            selected: action.selected
           }
         }
       })
       return {
-        data:nowData
+        data: nowData
+      };
+    case "EDIT":
+      nowData.forEach((item, index) => {
+        if (item.id === action.id) {
+          nowData[index] = {
+            ...item,
+            message: action.message
+          }
+        }
+      })
+      return {
+        data: nowData
       }
     default: break;
   }
   return state;
 }
-const store = createStore(reducer);
+const store = createStore(combineReducers({
+  reducer
+}));
 
 export { store };
